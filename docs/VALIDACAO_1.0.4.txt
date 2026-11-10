@@ -1,0 +1,26 @@
+IMAGINATION HUB 1.0.4 — RELATÓRIO DE VALIDAÇÃO
+Data: 09/11/2026
+Base: Imagination Hub 1.0.3 Hotfix
+Escopo: testes adicionais de isolamento local e migração legada.
+
+1. TESTES AUTOMATIZADOS
+- node --test: 19 testes executados, 19 aprovados, 0 falhas.
+- Inclui dois testes novos executando o código real de accountStorage com armazenamento local simulado.
+- Verificada separação entre duas contas no mesmo perfil de navegador.
+- Verificada independência do nome de exibição.
+- Verificada migração com preservação da origem e bloqueio de reivindicação duplicada.
+
+2. SINTAXE
+- node --check em todos os arquivos JavaScript da raiz e da pasta test/: aprovado.
+
+3. LIMITES
+- Não equivale a E2E visual em Chrome/Edge.
+- Não foram usadas contas reais de YouTube, TikTok, Instagram, OpenAI, Anthropic, Gemini ou OpenArt.
+- MP4/H.264, armazenamento de mídia binária em nuvem, publicação social e automações agendadas continuam pendentes.
+- Não publicar como SaaS multiusuário pronto para produção.
+
+4. COMANDOS
+- npm test
+- for f in *.js test/*.js; do node --check "$f"; done
+
+Resultado reportado: 19/19 testes aprovados; sintaxe JavaScript aprovada.
