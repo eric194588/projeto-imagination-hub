@@ -1,0 +1,21 @@
+# Segredos e dados locais
+.env
+.env.*
+!.env.example
+.ih-vault-key
+integration-vault.enc
+accounts.json
+data/
+workspaces/
+test-data/
+
+# Dependências e logs
+node_modules/
+*.log
+*.tmp
+
+# Sistema/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
